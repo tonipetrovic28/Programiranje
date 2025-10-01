@@ -21,6 +21,11 @@ try:
     print(f"broj krusaka {broj_krusaka}")
 except Exception as e:
     print(f"greška: {e}")
+trazim_voce = 'kruske'
+if trazim_voce in kosarica:
+    print(f"imamo {kosarica[trazim_voce]} komada voća '{trazim_voce}.")
+else:
+    print(f"nažalost, nemamo '{trazim_voce}', u kosarici.")
 
 trazim_voce = 'kreke'
 if trazim_voce in kosarica:
