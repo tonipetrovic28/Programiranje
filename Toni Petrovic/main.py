@@ -31,7 +31,6 @@ def broj_rijeci(lista_rijeci):
             brojac_rijeci[rijec] =1
     return brojac_rijeci
 
-
 if __name__=="__main__":
     filepath = "tekst.txt"
     print(f"Učitavam tekst iz datoteke: {filepath}")
@@ -51,3 +50,4 @@ if __name__=="__main__":
         print(brojac_rijeci)
     else:
         print("Greška pri očišćavanju teksta.")
+
