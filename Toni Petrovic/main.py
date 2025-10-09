@@ -12,7 +12,7 @@ def ucitaj_tekst(filepath):
         print(f"Greška: Datoteka na putanji '{filepath}' nije pronađena")
         return None # Vratit ćemo 'ništa' ako datoteka ne postoji
 
-# Funkcija za proišćavanje teksta 
+# Funkcija za pročišćavanje teksta 
 def ocisti_tekst(tekst):
     # Kod za pročišćavanje teksta ide ovdje
     tekst = tekst.lower()
@@ -80,3 +80,4 @@ if __name__ == "__main__":
 
     else:
         print("Greška pri očišćavanju teksta.")
+
