@@ -41,11 +41,11 @@ def ukloni_stop_words(rjecnik_frekvencija, stop_words_lista):
     return ocisceni_rjecnik
 
 # ZADATAK 2: Sortiranje i ispis rezultata
-def sortiraj_i_ispisi(rjecnik_frekvencija):
+def sortiraj_i_ispisi(rjecnik_frekvencija, broj_rijeci=15):
     sortirana_lista = sorted(rjecnik_frekvencija.items(), key=lambda x: x[1], reverse=True)
 
-    print("\n--- Top 15 najčešćih riječi ---")
-    for i, (rijec, frekvencija) in enumerate(sortirana_lista[:15]):
+    print(f"\n--- Top {broj_rijeci} najčešćih riječi ---")
+    for i, (rijec, frekvencija) in enumerate(sortirana_lista[:broj_rijeci]):
         print(f"{i+1}. {rijec}: {frekvencija}")
     print("------------------------------")
 
@@ -80,4 +80,5 @@ if __name__ == "__main__":
 
     else:
         print("Greška pri očišćavanju teksta.")
+
 
