@@ -33,27 +33,31 @@ Ovakva separacija omogućuje očuvanje integriteta analize, dok se istovremeno z
 
 1. Korelacija temperature i udjela vode
    <img src="assets/graf1_temperatura_voda.png" width="500">
+
    Graf prikazuje odnos između temperature tla i postotka vode, uz dodatnu dimenziju prisutnosti metana (hue).
 
 Interpretacija:
 Uočava se da uzorci s detektiranim metanom često koreliraju s umjerenim temperaturnim rasponima i povišenim udjelom vode, što je u skladu s hipotezama o mogućim mikrobiološkim procesima.
 
 2. Geoprostorna distribucija dubine bušenja
-   graf2_karta_dubine.png
+   <img src="assets/graf2_karta_dubine.png" width="500">
+
    Vizualizacija koristi kolornu mapu (viridis) za prikaz dubine bušenja po koordinatama.
 
 Interpretacija:
 Veće dubine bušenja koncentrirane su u specifičnim zonama, što može ukazivati na ciljano uzorkovanje geološki zanimljivih slojeva.
 
 3. Distribucija metanskih signala
-   graf3_metan.png
+   <img src="assets/graf3_metan.png" width="500">
+   
    Pozitivni i negativni metanski signali prikazani su različitim bojama (crveno/plavo).
 
 Interpretacija:
 Metanski signali nisu uniformno raspoređeni, već pokazuju klastersko ponašanje, što sugerira lokalizirane izvore emisije.
 
 4. Karta kandidata za život
-   karta_kandidata.png
+   <img src="assets/karta_kandidata.png" width="500">
+   
    Na temelju filtriranih podataka izdvojene su lokacije koje zadovoljavaju uvjete:
 
 * pozitivan metanski signal
@@ -65,7 +69,8 @@ Interpretacija:
 Ove točke predstavljaju prioritete za daljnje istraživanje jer kombiniraju više biološki relevantnih indikatora.
 
 5. Satelitska karta s geoprostornim poravnanjem
-   misijska_karta_jezero.jpg
+   <img src="assets/misijska_karta_jezero.jpg" width="500">
+   
    Podaci su projicirani na satelitsku sliku korištenjem parametra "extent", koji definira granice prikaza slike u koordinatnom sustavu podataka:
 
 [min_long, max_long, min_lat, max_lat]
