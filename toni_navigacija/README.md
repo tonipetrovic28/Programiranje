@@ -32,14 +32,14 @@ Ovakva separacija omogućuje očuvanje integriteta analize, dok se istovremeno z
 ## C. GEOPROSTORNA ANALIZA I VIZUALIZACIJA
 
 1. Korelacija temperature i udjela vode
-      graf1_temperatura_voda.png
+   <img src="assets/graf1_temperatura_voda.png" width="500">
    Graf prikazuje odnos između temperature tla i postotka vode, uz dodatnu dimenziju prisutnosti metana (hue).
 
 Interpretacija:
 Uočava se da uzorci s detektiranim metanom često koreliraju s umjerenim temperaturnim rasponima i povišenim udjelom vode, što je u skladu s hipotezama o mogućim mikrobiološkim procesima.
 
 2. Geoprostorna distribucija dubine bušenja
-      graf2_karta_dubine.png
+   graf2_karta_dubine.png
    Vizualizacija koristi kolornu mapu (viridis) za prikaz dubine bušenja po koordinatama.
 
 Interpretacija:
