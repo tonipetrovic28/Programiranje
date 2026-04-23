@@ -2,13 +2,13 @@ ANALIZA PODATAKA KRATERA JEZERO – TEHNIČKA DOKUMENTACIJA
 
 ---
 
-## A. IZVRŠNI SAŽETAK (EXECUTIVE SUMMARY)
+## A. IZVRŠNI SAŽETAK
 
 Ovaj projekt implementira analitički pipeline za obradu geoprostornih i kemijskih podataka prikupljenih unutar kratera Jezero na Marsu. Ulazni podaci sastoje se od dviju relacijskih CSV tablica koje sadržavaju informacije o lokacijama uzorkovanja i pripadajućim senzorskim očitanjima (temperatura tla, pH vrijednost, udio vode, detekcija metana i organskih molekula). Primarni cilj analize je identificirati znanstveno relevantne lokacije koje pokazuju potencijalne indikatore biološke aktivnosti te generirati strukturirani, strojno čitljiv navigacijski nalog (JSON payload) za autonomni istraživački sustav.
 
 ---
 
-## B. METODOLOGIJA OBRADE PODATAKA (DATA WRANGLING)
+## B. METODOLOGIJA OBRADE PODATAKA
 
 Podaci se učitavaju iz odvojenih izvora te se spajaju korištenjem relacijskog ključa "ID_Uzorka". Primijenjen je unutarnji spoj (inner join) kako bi se osigurala konzistentnost zapisa između lokacijskih i senzorskih podataka.
 
@@ -32,24 +32,28 @@ Ovakva separacija omogućuje očuvanje integriteta analize, dok se istovremeno z
 ## C. GEOPROSTORNA ANALIZA I VIZUALIZACIJA
 
 1. Korelacija temperature i udjela vode
+   graf1_temperatura_voda.png
    Graf prikazuje odnos između temperature tla i postotka vode, uz dodatnu dimenziju prisutnosti metana (hue).
 
 Interpretacija:
 Uočava se da uzorci s detektiranim metanom često koreliraju s umjerenim temperaturnim rasponima i povišenim udjelom vode, što je u skladu s hipotezama o mogućim mikrobiološkim procesima.
 
 2. Geoprostorna distribucija dubine bušenja
+   graf2_karta_dubine.png
    Vizualizacija koristi kolornu mapu (viridis) za prikaz dubine bušenja po koordinatama.
 
 Interpretacija:
 Veće dubine bušenja koncentrirane su u specifičnim zonama, što može ukazivati na ciljano uzorkovanje geološki zanimljivih slojeva.
 
 3. Distribucija metanskih signala
+   graf3_metan.png
    Pozitivni i negativni metanski signali prikazani su različitim bojama (crveno/plavo).
 
 Interpretacija:
 Metanski signali nisu uniformno raspoređeni, već pokazuju klastersko ponašanje, što sugerira lokalizirane izvore emisije.
 
 4. Karta kandidata za život
+   karta_kandidata.png
    Na temelju filtriranih podataka izdvojene su lokacije koje zadovoljavaju uvjete:
 
 * pozitivan metanski signal
@@ -61,6 +65,7 @@ Interpretacija:
 Ove točke predstavljaju prioritete za daljnje istraživanje jer kombiniraju više biološki relevantnih indikatora.
 
 5. Satelitska karta s geoprostornim poravnanjem
+   misijska_karta_jezero.jpg
    Podaci su projicirani na satelitsku sliku korištenjem parametra "extent", koji definira granice prikaza slike u koordinatnom sustavu podataka:
 
 [min_long, max_long, min_lat, max_lat]
@@ -70,7 +75,7 @@ Extent mapiranje omogućuje transformaciju piksel koordinata slike u realne GPS 
 
 ---
 
-## D. KOMUNIKACIJSKI PROTOKOL (JSON UPLINK)
+## D. KOMUNIKACIJSKI PROTOKOL
 
 Izlazni sustav generira strukturirani JSON objekt koji sadržava listu kandidata za istraživanje. Svaki zapis uključuje identifikator uzorka, geopoziciju i skup akcija koje robot treba izvršiti.
 
@@ -94,7 +99,7 @@ Generiranje ovog izlaza implementirano je korištenjem iterativne petlje kroz fi
 
 ---
 
-## E. INŽENJERSKI DNEVNIK (TROUBLESHOOTING LOG)
+## E. INŽENJERSKI DNEVNIK
 
 1. Problem: Neispravno učitavanje CSV datoteka
    Simptom:
